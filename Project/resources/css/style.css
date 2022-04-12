@@ -1,0 +1,53 @@
+.top{
+    
+    display: flex;
+    
+    border-bottom:5px solid blueviolet;
+}
+
+.menu{
+    width: 100%;
+    float: left;
+    font-weight: bold;
+    color:rgb(59, 56, 56);
+}
+
+h1{
+    text-align: center;
+}
+
+.form{
+    margin-top: 20px;
+    position:absolute;
+    left:30%;
+    align-items: center;
+    height: 300px;
+    width:450px;
+    text-align: center;
+    border-style: solid;
+   
+}
+
+.fields>div{
+    
+    margin-bottom:10px;
+    
+    
+}
+
+.form>p{
+    
+    font-size: small;
+}
+
+#button{
+    text-align: center;
+    width: 70px;
+   
+    padding: 7px 6px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+a{
+    color:blue;
+}
