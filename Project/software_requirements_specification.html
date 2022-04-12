@@ -198,6 +198,516 @@
 
             </section>
 
+            <!-- Section 2 - External Interface Requirements -->
+            <section>
+                <h2>3. External Interface Requirements</h2>
+                <section>
+                    <h3>3.1 User Interfaces</h3>
+                    <p>We have a web application with a menu displayed in the top of the web page and we will access to the sections by clicking 
+                        on the buttons. The different sections provided in the menu are:</p>
+                        <ul>
+                            <li >Login and profile</li>
+                            <li >General information : feeding schedule, list of food that the pet can it, list of restrictions, time to go for a walk, etc.</li>
+                            <li>Medical history</li>
+                            <li>Friends</li>
+                            <li>Multimedia</li>
+                        </ul>
+                </section>
+                <section>
+                    <h3>3.2 Hardware Interfaces</h3>
+                    <p>The hardware products we need are:</p>
+                    <ul>
+                        <li >Smartphone, tablet, computer or similar, where we can use the Application Web</li>
+                        <li > Optional: camera or smartphone that we can use to take photos, videos, audios, etc.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>3.3 Software Interfaces</h3>
+                    <p>Data base where we can store the data for the identification of a user, the feeding schedules, list of restrictions, multimedia resources, medical history, relationship with other animals, etc.</p>
+                    <p>We also need to provide a way of connecting our database with social media (instagram).</p>
+                </section>
+                <section>
+                    <h3>3.4 Communications Interfaces</h3>
+                    <p>The user will login in the Application Web with a e-mail, or with a phone number.</p>
+                </section>
+            </section>
+            <section>
+                <h2>4.System Features</h2>
+                <section>
+                    <h3>4.1 Autentification</h3>
+                    <ul>
+                        <li>
+                            4.1.1   Description and Priority
+                            <p> The user will enter a name account and a password, if they are right the app will be initializated and if they are wrong we will have an error message. High priority</p>
+                        </li>
+                        <li>
+                            4.1.2   Stimulus/Response Sequences
+                            <p>
+                                <ul>
+                                    <li>The system asks for a username and a password</li>
+                                    <li>The user enters a password</li>
+                                    <li>If the credentials are right, initialize the app</li>
+                                    <li>If the credentials are wrong, show a error message </li>
+                                </ul>
+                            </p>
+                        </li>
+                        <li>
+                            4.1.3   Functional Requirements
+                            <p>
+                                <ul>
+                                    <li>checkUser</li>
+                                    <li>initializeApp</li>
+                                    <li>errorMessage</li>
+                                </ul>
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.2 Show profile</h3>
+                    <ul>
+                        <li>
+                            4.2.1   Description and Priority
+                            <p> Show the profile of the user, where the user can see the name of their pet, the username, the password and the e-mail/number phone associated. Low priority</p>
+                        </li>
+                        <li>
+                            4.2.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system list the information we have about the profile</li>                            
+                            </ul>
+                        </li>
+                        <li>
+                            4.2.3   Functional Requirements
+                            <ul>
+                                <li>showProfile</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.3 Modify profile</h3>
+                    <ul>
+                        <li>
+                            4.3.1   Description and Priority
+                            <p>Modify the pet name, the username, the password or the e-mail/number phone associated. Low priority</p>
+                        </li>
+                        <li>
+                            4.3.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system list the information we have about the profile</li>
+                                <li>The user show which information want to change</li>
+                                <li>The user change the information</li>
+                                <li>If the new information is right, save it.</li>
+                                <li>If the new information is wrong, show a error message</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.3.3   Functional Requirements
+                            <ul>
+                                <li>modifyProfile</li>
+                                <li>errorMessage</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.4 Show feeding schedule</h3>
+                    <ul>
+                        <li>
+                            4.4.1   Description and Priority
+                            <p>Show the feeding schedule of the pet. Medium priority.</p>
+                        </li>
+                        <li>
+                            4.4.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system list the feeding schedule</li>
+                            </ul>
+                        </li>
+                        <li>4.4.3   Functional Requirements
+                            <ul>
+                                <li>showFeedingSchedule</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.5 Create feeding schedule</h3>
+                    <ul>
+                        <li>
+                            4.5.1   Description and Priority
+                            <p>Create the feeding schedule of the pet. Medium priority.</p>
+                        </li>
+                        <li>
+                            4.5.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system show the fields that the user needs to fill.</li>
+                                <li>The user fills the fields and press the button save.</li>
+                                <li>If the data is right save it in the database</li>
+                                <li> If the data is wrong show a error message</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.5.3   Functional Requirements
+                            <ul>
+                                <li>createFeedingSchedule</li>
+                                <li>errorMessage</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.6 Modify feeding schedule</h3>
+                    <ul>
+                        <li>
+                            4.6.1   Description and Priority
+                            <p> Modify the feeding schedule of the pet. Medium priority.</p>
+                        </li>
+                        <li>
+                            4.6.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system show the feeding schedule.</li>
+                                <li>The user change the fields and press the button save.</li>
+                                <li>If the data is right save it in the database</li>
+                                <li>If the data is wrong show a error message</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.6.3   Functional Requirements
+                            <ul>
+                                <li>showFeedingSchedule</li>
+                                <li>createFeedingSchedule</li>
+                                <li>errorMessage</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.7 Create list of food</h3>
+                    <ul>
+                        <li>
+                            4.7.1   Description and Priority
+                            <p>Create the list of food the pet can eat. Medium priority.</p>
+                        </li>
+                        <li>
+                            4.7.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system show the empty fields that the user needs to fill.</li>
+                                <li>The user fills the fields and press the button save.</li>
+                                <li>If the data is right save it in the database</li>
+                                <li>If the data is wrong show a error message</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.7.3   Functional Requirements
+                            <ul>
+                                <li>createListFood</li>
+                                <li>errorMessage</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.8 Modify list of food</h3>
+                    <ul>
+                        <li>
+                            4.8.1   Description and Priority
+                            <p>Modify the list of food the pet can eat. Medium priority.</p>
+                        </li>
+                        <li>
+                            4.8.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system show the list of food the pet can eat.</li>
+                                <li>The user change the fields and press the button save.</li>
+                                <li>If the data is right save it in the database</li>
+                                <li>If the data is wrong show a error message</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.8.3   Functional Requirements
+                            <ul>
+                                <li>showListFood</li>
+                                <li>modifyListFood</li>
+                                <li>errorMessage</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.9 Show feeding schedule</h3>
+                    <ul>
+                        <li>
+                            4.9.1   Description and Priority
+                            <p>Show the list of food the pet can eat. Medium priority.</p>
+                        </li>
+                        <li>
+                            4.9.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system list the list of food</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.9.3   Functional Requirements
+                            <ul>
+                                <li> showListFood</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.10 Create walk schedule</h3>
+                    <ul>
+                        <li>
+                            4.10.1   Description and Priority
+                            <p> Create the schedule for going for a walk. Medium priority.</p>
+                        </li>
+                        <li>
+                            4.10.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system show the empty fields that the user needs to fill.</li>
+                                <li> The user fills the fields and press the button save.</li>
+                                <li>If the data is right save it in the database</li>
+                                <li>If the data is wrong show a error message</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.10.3   Functional Requirements
+                            <ul>
+                                <li>createWalkSchedule</li>
+                                <li>errorMessage</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.11 Modify walk schedule</h3>
+                    <ul>
+                        <li>
+                            4.11.1   Description and Priority
+                            <p>Modify the walk schedule. Medium priority.</p>
+                        </li>
+                        <li>
+                            4.11.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system show the schedule for walking.</li>
+                                <li>The user change the fields and press the button save.</li>
+                                <li>If the data is right save it in the database</li>
+                                <li>If the data is wrong show a error message</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.11.3   Functional Requirements
+                            <ul>
+                                <li>showWalkSchedule</li>
+                                <li>modifyWalkSchedule</li>
+                                <li>errorMessage</li>
+
+                            </ul>
+
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.12 Show walk schedule</h3>
+                    <ul>
+                        <li>
+                            4.12.1   Description and Priority
+                            <p>Show the walk schedule of the pet. Medium priority.</p>
+                        </li>
+                        <li>
+                            4.12.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system list the walk schedule</li>
+                            </ul>
+
+                        </li>
+                        <li>4.12.3   Functional Requirements
+                            <ul>
+                                <li>showWalkSchedule</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.13 Show medical History</h3>
+                    <ul>
+                        <li>
+                            4.13.1   Description and Priority
+                            <p>Show the medical history of the pet. Medium priority.</p>
+                        </li>
+                        <li>
+                            4.13.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system list the medical history</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.13.3   Functional Requirements
+                            <ul>
+                                <li>showMedicalHistory</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.14 Accept invitation</h3>
+                    <ul>
+                        <li>
+                            4.14.1   Description and Priority
+                            <p>Add a new friend into our list of friends. Low priority.</p>
+                        </li>
+                        <li>
+                            4.14.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The user accept an invitation to be friends</li>
+                                <li>The system add the new friend into the friends list</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.14.3   Functional Requirements
+                            <ul>
+                                <li>addFriend</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.15 Send invitation</h3>
+                    <ul>
+                        <li>4.15.1   Description and Priority
+                            <p> Send an invitation to a friend. Low priority.</p>
+                        </li>
+                        <li>
+                            4.15.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The user send an invitation to another friend.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.15.3   Functional Requirements
+                            <ul>
+                                <li>sendInvitation</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.16 Show friends</h3>
+                    <ul>
+                        <li>
+                            4.16.1   Description and Priority
+                            <p>Show the list of friends. Low priority.</p>
+                        </li>
+                        <li>
+                            4.16.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system shows the list of friends</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.16.3   Functional Requirements
+                            <ul>
+                                <li>showFriends</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>4.17 Save multimedia</h3>
+                    <ul>
+                        <li>
+                            4.17.1   Description and Priority
+                            <p> Save a new multimedia file. Medium priority</p>
+                        </li>
+                        <li>
+                            4.17.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The user upload a new file and press save</li>
+                                <li>The system saves the file in the database</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.17.3   Functional Requirements
+
+                            <ul>
+                                <li>saveMultimedia</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </section>
+                <section>
+                    <h3>4.18 Delete multimedia</h3>
+                    <ul>
+                        <li>
+                            4.18.1   Description and Priority
+                            <p>Delete a multimedia file. Medium priority</p>
+                        </li>
+                        <li>
+                            4.18.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system shows the files</li>
+                                <li>The user select the file they want to delete</li>
+                                <li>The system delete the file from the database</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.18.3   Functional Requirements
+                            <ul>
+                                <li>showMultimedia</li>
+                                <li>deleteMultimedia</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </section>
+                <section>
+                    <h3>
+                        4.19 Show multimedia
+                    </h3>
+                    <ul>
+                        <li>
+                            4.19.1   Description and Priority
+                            <p>Show the multimedia files. Medium priority</p>
+                        </li>
+                        <li>
+                            4.19.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system shows the files</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.19.3   Functional Requirements
+                            <ul>
+                                <li>showMultimedia</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </section>
+                <section>
+                    <h3>4.20 Connect to social media</h3>
+                    <ul>
+                        <li>
+                            4.20.1   Description and Priority
+                            <p> Connect to social media (instagram) the multimedia files we have in the App Web. Low priority</p>
+                        </li>
+                        <li>
+                            4.20.2   Stimulus/Response Sequences
+                            <ul>
+                                <li>The system ask for the user and the password</li>
+                                <li>The user fills the fields</li>
+                                <li>The system access to the social media</li>
+                            </ul>
+                        </li>
+                        <li>
+                            4.20.3   Functional Requirements
+                            <ul>
+                                <li>connectSocialMedia</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </section>
         </article>
 
     </body>
