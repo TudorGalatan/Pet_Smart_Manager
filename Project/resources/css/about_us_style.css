@@ -1,0 +1,25 @@
+/* Stylesheet */
+
+
+
+/* About Us Title */
+.about_us_title
+{
+    font-size: 20px;
+    text-align: center;
+    color: red;
+}
+
+
+/* Team Members Container */
+.team_members
+{
+    display: flex;
+}
+
+
+/* Team Member Container */
+.team_member
+{
+    border: 5 solid black;
+}
