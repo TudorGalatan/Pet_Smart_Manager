@@ -1,0 +1,37 @@
+/* My Profile Stylesheet */
+
+
+
+/* About Us Title */
+.my_profile_title
+{
+    font-size: 4em;
+    text-align: center;
+    color: black;
+}
+
+
+/* My Profile Content */
+.my_profile_content
+{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* My Profile Photograph */
+.my_profile_photograph
+{
+
+}
+
+
+/* My Profile Information */
+.my_profile_information
+{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}

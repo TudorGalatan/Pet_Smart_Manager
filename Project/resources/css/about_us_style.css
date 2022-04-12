@@ -1,0 +1,52 @@
+/* About Us Stylesheet */
+
+
+
+/* About Us Title */
+.about_us_title
+{
+    font-size: 4em;
+    text-align: center;
+    color: black;
+}
+
+
+/* Project Description */
+.project_description
+{
+    font-size: 2em;
+    text-align: center;
+}
+
+
+/* Team Members Container */
+.team_members
+{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* Team Member Container */
+.team_member
+{
+    display: flex;
+    flex-direction: column;
+    border: 5 solid black;
+}
+
+
+/* Team Member Photograph */
+.team_member_photograph
+{
+    height: 20em;
+}
+
+
+/* Team Member Name */
+.team_member_name
+{
+    font-size: 3em;
+}

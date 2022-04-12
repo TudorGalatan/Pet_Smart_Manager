@@ -1,0 +1,57 @@
+/* Pets Stylesheet */
+
+
+
+/* Pets Title */
+.pets_title
+{
+    font-size: 4em;
+    text-align: center;
+    color: black;
+}
+
+
+/* Pets Content */
+.pets_content
+{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* Pet Summary */
+.pet_summary
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Pet Photograph */
+.pet_photograph
+{
+    height: 20em;
+}
+
+
+/* Pet Name */
+.pet_name
+{
+    font-size: 3em;
+}
+
+
+/* Delete Pet */
+.delete_pet
+{
+    font-size: 3em;
+}
+
+
+/* Add New Pet */
+.add_new_pet
+{
+    font-size: 3em;
+}
