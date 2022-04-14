@@ -35,3 +35,17 @@
     flex-direction: column;
     text-align: left;
 }
+
+.top{
+    
+    display: flex;
+    
+    border-bottom:5px solid blueviolet;
+}
+
+.menu{
+    width: 100%;
+    float: left;
+    font-weight: bold;
+    color:rgb(59, 56, 56);
+}
