@@ -17,9 +17,10 @@ h1{
 }
 
 .form{
+    display:block;
     margin-top: 20px;
-    position:absolute;
-    left:30%;
+    
+    margin-left:30%;
     align-items: center;
     height: 300px;
     width:450px;
@@ -266,3 +267,18 @@ h2 {
   height: 45px;
 }
 
+
+
+.bottom{
+  border-top:5px solid blueviolet;
+  border-bottom:5px solid blueviolet;
+  border-left: 5px solid blueviolet;
+  border-right:5px solid blueviolet;
+  text-align: center;
+  font-size:xx-large;
+  
+  line-height: 60px;
+  font-weight: bold;
+  height:60px;
+  margin-top:10px;
+}
