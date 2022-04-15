@@ -1,7 +1,7 @@
 
 body{
   
-  background-color:cornsilk;
+  background-color:white;
   
 }
 html {
@@ -18,7 +18,7 @@ html {
 .top{
     
     display: flex;
-    
+   
     border-bottom:5px solid blueviolet;
 }
 
@@ -43,6 +43,8 @@ h1{
     width:450px;
     text-align: center;
     border-style: solid;
+
+    background-color: beige;
    
 }
 
@@ -76,6 +78,8 @@ a{
     grid-gap: 10px;
    
     height: 500px;
+
+    
 }
 
 .panel{
@@ -85,10 +89,8 @@ a{
     border-left: 1px solid black;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
-}
 
-.panel > #photo{
-
+    background-color: beige;
 }
 
 #photo div:first-child{
@@ -144,6 +146,8 @@ a{
     border-left: 1px solid black;
     border-right: 1px solid black;
     margin:10px;
+
+    background-color: beige;
    
 }
 
@@ -305,4 +309,7 @@ footer {
   border-bottom:5px solid blueviolet;
   border-left: 5px solid blueviolet;
   border-right:5px solid blueviolet;
+
+  color:white;
+  background-color:cadetblue;
 }
