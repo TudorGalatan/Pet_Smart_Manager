@@ -1,3 +1,20 @@
+
+body{
+  
+  background-color:cornsilk;
+  
+}
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+
+.content {
+
+  margin-bottom: 60px;
+}
+
 .top{
     
     display: flex;
@@ -269,16 +286,23 @@ h2 {
 
 
 
-.bottom{
+
+
+
+footer {
+ 
+  position: absolute;
+  bottom: 0;
+  width: 98.5%;
+  height: 40px;
+ 
+  text-align: center;
+  font-size:xx-large;
+  line-height: 40px;
+  font-weight: bold;
+
   border-top:5px solid blueviolet;
   border-bottom:5px solid blueviolet;
   border-left: 5px solid blueviolet;
   border-right:5px solid blueviolet;
-  text-align: center;
-  font-size:xx-large;
-  
-  line-height: 60px;
-  font-weight: bold;
-  height:60px;
-  margin-top:10px;
 }

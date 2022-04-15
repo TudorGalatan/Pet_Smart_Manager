@@ -49,3 +49,38 @@
     font-weight: bold;
     color:rgb(59, 56, 56);
 }
+
+
+
+body{
+  
+    background-color:cornsilk;
+    
+  }
+  html {
+    min-height: 100%;
+    position: relative;
+  }
+  
+  footer {
+ 
+    position: absolute;
+    bottom: 0;
+    width: 98.5%;
+    height: 40px;
+   
+    text-align: center;
+    font-size:xx-large;
+    line-height: 40px;
+    font-weight: bold;
+  
+    border-top:5px solid blueviolet;
+    border-bottom:5px solid blueviolet;
+    border-left: 5px solid blueviolet;
+    border-right:5px solid blueviolet;
+  }
+  
+  .content {
+  
+    margin-bottom: 60px;
+  }
