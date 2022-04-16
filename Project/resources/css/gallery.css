@@ -1,0 +1,39 @@
+/* Gallery */
+
+
+
+/* Gallery Title */
+.gallery_title
+{
+    font-size: 4em;
+    text-align: center;
+    color: black;
+}
+
+
+/* Gallery Content */
+.gallery_content
+{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* Gallery Summary */
+.gallery_summary
+{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* Add New */
+.add_new
+{
+    font-size: 3em;
+}
+
