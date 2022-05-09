@@ -21,3 +21,20 @@
 }
 
 
+
+.main_image{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+  height:450px;
+  width: 1000px;
+
+  
+}
+
+.img_main {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
