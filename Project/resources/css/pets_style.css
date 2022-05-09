@@ -53,6 +53,9 @@
 /* Add New Pet */
 .add_new_pet
 {
-    font-size: 3em;
+    font-size:xx-large;
 }
 
+p{
+    font-size: large; 
+}
