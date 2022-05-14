@@ -1,0 +1,26 @@
+.panel{
+    display:block;
+    margin-top: 20px;
+    
+    margin-left:30%;
+    align-items: center;
+    height: 300px;
+    width:450px;
+    text-align: center;
+    border-style: solid;
+
+    background-color: beige;
+   
+}
+
+.fields>div{
+    
+    margin-bottom:10px;
+    
+    
+}
+
+.form>p{
+    
+    font-size: small;
+}
