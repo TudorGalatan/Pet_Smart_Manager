@@ -23,7 +23,23 @@
 }
 
 
-calendar.img{
-    display: grid;
+/* Calendar */
+.calendar
+{
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
+
+.edit_buttom{
+    font-weight: bold;
+    text-align: center;
+  }
+
+
+.buttons{
+    font-weight: bold;
+    text-align: center;
+  }
+
+
