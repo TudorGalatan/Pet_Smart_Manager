@@ -35,7 +35,7 @@
                     <div class="fields">
                         <form  method="POST" action="./../php/insertUser.php">
                             <div>Select the type of account:     <input type="text" id="type" name="type" required></div> 
-                            <div>Username:        <input type="text" id="username" name="username""></div>
+                            <div>Username:        <input type="text" id="username" name="username"></div>
                             <div>Name:        <input type="text" id="name" name="name" required></div>
                             <div>Password:        <input type="text" id="password" name="password"></div>
                             <div>Email:        <input type="text" id="email"  name="email" required></div>
@@ -45,6 +45,9 @@
                     <input type="submit" value="Submit" name="submit" id="button"> 
                     <br>
                     <br>
+                    <?php
+                        include "./../php/insertUser.php";
+                    ?>
                     
                         </form>
                     </div>

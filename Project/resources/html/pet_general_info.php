@@ -28,11 +28,16 @@
             <h1>Toby</h1>
             <section>
                 <div class="panel">
-                    <p>Age:</p>
-                    <p>Type of pet:</p>
-                    <p>Breed:</p>
-                    <a class="edit_buttom" href="./edit_general_info.html"> Edit</a>
-                    <br>
+                    <form  method="GET" action="./../php/consultGeneralInfo.php">
+                        <p>Age: <input type="text" id="age" name="age" value='$_GET[$age]' ></p>
+                        <p>Type of pet: <input type="text" id="type" name="type" value='$type'></p>
+                        <p>Breed: <input type="text" id="breed" name="breed" value='$breed'></p>
+                        <a class="edit_buttom" href="./edit_general_info.html"> Edit</a>
+                        <br>
+                        <?php
+                            include "./../php/consultGeneralInfo.php";
+                        ?>
+                    </form>
                 </div>
             </section>
             <section>

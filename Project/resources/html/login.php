@@ -32,11 +32,17 @@
             <h1>Login</h1>
             
                 <div class="fields">
-                    <div>Username:     <input type="text"></div> 
-                    <div>Password:        <input type="text"></div>
+                    <form  method="POST" action="./../php/loginUser.php">
+                        <div>Username:     <input type="text" id="username" name="username"></div> 
+                        <div>Password:        <input type="text" id="password" name="password"></div>
+                        <input type="submit" value="Submit" name="submit" id="button"> 
+                        <?php
+                            include "./../php/loginUser.php";
+                        ?>
+                    </form>             
                 </div>
                 <br>
-                <input value="Submit" name="submit" id="button"> 
+               
                 <br>
                 <br>
                 <p>Don't have an account? Register <a href="./registration.html">here</a></p>

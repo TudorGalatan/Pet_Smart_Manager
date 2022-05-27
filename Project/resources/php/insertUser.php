@@ -11,16 +11,17 @@ $type = $_POST['type'];
 
 // -----
 
-$return =""; // variable de mensaje con la información 
+$return ="";  
 
 
 
-// (1) INSERCIÓN EN TABLA Empleado 
+ 
 $sql = "INSERT INTO users (username, password, name, email, type)
             VALUES ('$username', '$password', '$name', '$email', '$type');";
 
 if (mysqli_query($dbconn, $sql)) {
-    $return .=  "New user added.";
+    header("Location: http://localhost/Pet_Smart_Manager/Project/resources/html/pets.html");
+    exit();
             
 } 
 else {
