@@ -45,9 +45,7 @@
                     <input type="submit" value="Submit" name="submit" id="button"> 
                     <br>
                     <br>
-                    <?php
-                        include "./../php/insertUser.php";
-                    ?>
+                   
                     
                         </form>
                     </div>
