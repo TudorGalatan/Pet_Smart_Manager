@@ -111,7 +111,7 @@
                             </button>
                         </div>
                         <div class="buttons">
-                            <div class="modify_event"><a href="./add_event.html">Add event</a></div>
+                            <div class="modify_event"><a href="./add_event.php">Add event</a></div>
                             <div class="modify_event"><a href="./remove_event.html">Delete event</a></div>
                         </div>
                         <br>

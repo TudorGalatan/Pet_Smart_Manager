@@ -43,6 +43,7 @@
                     <input type="submit" value="Submit" name="submit" id="button"
                     <br>
                     <br>
+                    </form>
                 </div>
             </section>
         </div>

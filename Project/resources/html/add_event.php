@@ -33,12 +33,13 @@
                 <h1>Add a new event</h1>
                 
                     <div class="fields">
-                        <div>Name of the event:        <input type="text"></div>
-                        <div>Year:        <input type="text"></div>
-                        <div>Description:        <input type="text"></div>
+                    <form  method="POST" action="./../php/insertEvent.php">
+                        <div>Name of the event:        <input type="text" id="name" name="name"></div>
+                        <div>Date:        <input type="text" id="date" name="date"></div>
+                        <div>Description:        <input type="text" id="description" name="description"></div>
                     </div>
                     <br>
-                    <input value="Submit" name="submit" id="button"> 
+                    <input type="submit" value="Submit" name="submit" id="button"> 
                     <br>
                     <br>
                 </div>
