@@ -1,11 +1,6 @@
 <?php
 include('connect.php');
 
-
-
-
-
-
 // -----
 
 $return ="";  
@@ -22,6 +17,8 @@ if ($result) {
     $type = $row[1];
     $breed = $row[2];
    
+    $age = $_GET['age'];
+
 
     $return .= $age;
     

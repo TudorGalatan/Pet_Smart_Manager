@@ -115,6 +115,21 @@
     border-color: transparent transparent transparent white;
   }
   
+  .timeline .date {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .timeline .description {
+    display: block;
+    font-size: 0.7rem;
+
+    margin-bottom: 8px;
+  }
+  
+
   .timeline time {
     display: block;
     font-size: 1.2rem;

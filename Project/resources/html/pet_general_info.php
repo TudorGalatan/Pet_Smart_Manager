@@ -28,16 +28,44 @@
             <h1>Toby</h1>
             <section>
                 <div class="panel">
-                    <form  method="GET" action="./../php/consultGeneralInfo.php">
-                        <p>Age: <input type="text" id="age" name="age" value='$_GET[$age]' ></p>
-                        <p>Type of pet: <input type="text" id="type" name="type" value='$type'></p>
-                        <p>Breed: <input type="text" id="breed" name="breed" value='$breed'></p>
-                        <a class="edit_buttom" href="./edit_general_info.html"> Edit</a>
+                    <?php
+                        include('./../php/connect.php');
+
+                        // -----
+
+                        $return ="";  
+
+
+                        $sql = "SELECT age,type,breed FROM pets WHERE id = '9';";
+                        
+                        $result = mysqli_query($dbconn, $sql);
+                        $row = mysqli_fetch_row($result);
+
+                        if ($result) {
+
+                            $age = $row[0];
+                            $type = $row[1];
+                            $breed = $row[2];
+                                
+                        } 
+                        else {
+                            $return .= "Code error: " . $sql . " " . mysqli_error($dbconn);
+                        }
+
+                        echo $return;
+
+                        mysqli_close($dbconn);
+
+                    ?>
+                   
+                    <p>Age: <?php echo $age?> </p>
+                    <p>Type of pet: <?php echo $type?></p>
+                    <p>Breed: <?php echo $breed?></p>
+                       
                         <br>
-                        <?php
-                            include "./../php/consultGeneralInfo.php";
-                        ?>
-                    </form>
+                        
+                    
+                    <a class="edit_buttom" href="./edit_general_info.html"> Edit</a>
                 </div>
             </section>
             <section>
@@ -47,17 +75,32 @@
                     </div>
                     <div class="timeline">
                         <ol>
-                            <li>
-                                <div>
-                                    <time>Day of birth</time>
-                                </div>
-                            </li>
-                            <li>
-                                <div>
-                                    <time>Day of adoption</time>
-                                </div>
-                            </li>
+                            <?php 
+                                include('./../php/connect.php');
+                                $return ="";  
+                                $sql = "SELECT * FROM events where id_pet=9;";
+                                $result = mysqli_query($dbconn, $sql);
+                                $num_rows = mysqli_num_rows($result);
+                                
+                                    for($i == 0; $i < $num_rows; $i++){ 
+                                        $row = mysqli_fetch_row($result);
+                                        ?>
+                                        
+                                            <li>
+                                                <div>
+                                                    <p class="date"><?php echo $row[3] ?></p>
+                                                    <time><?php echo $row[2] ?></time>
+                                                    <p class="description"><?php echo $row[4] ?></p>
+                                                </div>
+                                            </li>
+                                        
+                                        
+                                        <?php 
+                                        
+                                    }
+                            ?>
                         </ol>
+                       
                        
                         <div class="arrows">
                             <button class="arrow arrow__prev disabled" disabled>
