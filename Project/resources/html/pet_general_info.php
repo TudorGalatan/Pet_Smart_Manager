@@ -65,7 +65,7 @@
                         <br>
                         
                     
-                    <a class="edit_buttom" href="./edit_general_info.html"> Edit</a>
+                    <a class="edit_buttom" href="./edit_general_info.php"> Edit</a>
                 </div>
             </section>
             <section>
