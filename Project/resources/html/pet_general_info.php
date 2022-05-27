@@ -78,7 +78,7 @@
                             <?php 
                                 include('./../php/connect.php');
                                 $return ="";  
-                                $sql = "SELECT * FROM events where id_pet=9;";
+                                $sql = "SELECT * FROM events where id_pet=9 order by date;";
                                 $result = mysqli_query($dbconn, $sql);
                                 $num_rows = mysqli_num_rows($result);
                                 
