@@ -31,17 +31,18 @@
             <section>
                 <div class="panel">
                 <h1>Add a new event</h1>
-                
-                    <div class="fields">
                     <form  method="POST" action="./../php/insertEvent.php">
-                        <div>Name of the event:        <input type="text" id="name" name="name"></div>
-                        <div>Date:        <input type="text" id="date" name="date"></div>
-                        <div>Description:        <input type="text" id="description" name="description"></div>
-                    </div>
-                    <br>
-                    <input type="submit" value="Submit" name="submit" id="button"> 
-                    <br>
-                    <br>
+                        <div class="fields">
+                        
+                            <div>Name of the event:        <input type="text" id="name" name="name"></div>
+                            <div>Date:        <input type="text" id="date" name="date"></div>
+                            <div>Description:        <input type="text" id="description" name="description"></div>
+                        </div>
+                        <br>
+                        <input type="submit" value="Submit" name="submit" id="button"> 
+                        <br>
+                        <br>
+                    </form>
                 </div>
             </section>
         </div>

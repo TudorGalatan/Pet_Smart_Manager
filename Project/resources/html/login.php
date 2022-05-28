@@ -30,15 +30,16 @@
             </header>
             <div class="panel">
             <h1>Login</h1>
-            
-                <div class="fields">
-                    <form  method="POST" action="./../php/loginUser.php">
-                        <div>Username:     <input type="text" id="username" name="username"></div> 
-                        <div>Password:        <input type="text" id="password" name="password"></div>
-                        <input type="submit" value="Submit" name="submit" id="button"> 
+                <form  method="POST" action="./../php/loginUser.php">
+                    <div class="fields">
                         
-                    </form>             
-                </div>
+                            <div>Username:     <input type="text" id="username" name="username"></div> 
+                            <div>Password:        <input type="text" id="password" name="password"></div>
+                            <input type="submit" value="Submit" name="submit" id="button"> 
+                            
+                                   
+                    </div>
+                </form>  
                 <br>
                
                 <br>
