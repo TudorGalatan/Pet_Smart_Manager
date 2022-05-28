@@ -20,7 +20,8 @@ if ($result) {
 
     $num_rows = mysqli_num_rows($result);
     if($num_rows > 0){
-       header("Location: http://localhost/Pet_Smart_Manager/Project/resources/html/pets.html");
+       setcookie("username", $username, 0, "/", null);
+       header("Location: http://localhost/Pet_Smart_Manager/Project/resources/html/pets.php");
         die();
     }
     else{

@@ -20,7 +20,8 @@ $sql = "INSERT INTO users (username, password, name, email, type)
             VALUES ('$username', '$password', '$name', '$email', '$type');";
 
 if (mysqli_query($dbconn, $sql)) {
-    header("Location: http://localhost/Pet_Smart_Manager/Project/resources/html/pets.html");
+    setcookie("username", $username, 0, "/", null);
+    header("Location: http://localhost/Pet_Smart_Manager/Project/resources/html/pets.php");
     exit();
             
 } 

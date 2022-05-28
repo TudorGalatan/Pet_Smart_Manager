@@ -26,7 +26,7 @@
             <header>
                 <a class="menu" href="./main_page.html"><img src="./../images/indice.jpeg" alt="Logo" id="logo"  width="30" height="31"></a>
                 <div class="menu">Come back</div>
-                <a class="menu" href="./pets.html">Home</a>
+                <a class="menu" href="./pets.php">Home</a>
                 <a class="menu" href="my_profile.html">Profile</a>
             </header>
 
@@ -37,34 +37,33 @@
                 <!-- Pets Content -->
                 <div class = "pets_content">
 
-                    <!-- Pet Summary -->
-                    <div class = "pet_summary">
-
-                        <!-- Photograph -->
-                        <img class = "pet_photograph" src = "./../images/dog.jpg" alt = "A photograph of Rex."  />
-
-                        <!-- Name -->
-                        <a class="pet_name" href="./pet_page.html">Rex</a>
-
-                        <!-- Delete -->
-                        <p>Delete pet</p>
+                    <?php 
+                        include('./../php/connect.php');
+                        $return ="";  
+                        $username = $_COOKIE["username"];
+                        $sql = "SELECT * FROM pets where username='$username';";
+                        $result = mysqli_query($dbconn, $sql);
+                        $num_rows = mysqli_num_rows($result);
                         
+                        for($i == 0; $i < $num_rows; $i++){ 
+                           $row = mysqli_fetch_row($result);
+                    ?>
+                            <!-- Pet Summary -->
+                            <div class = "pet_summary">
 
-                    </div>
+                                <!-- Photograph -->
+                                <img class = "pet_photograph" src = "./../images/dog.jpg" alt = "A photograph of Rex."  />
 
-                    <!-- Pet Summary -->
-                    <div class = "pet_summary">
+                                <!-- Name -->
+                                 <a class="pet_name" href="./pet_page.html"><?php echo $row[1] ?></a> 
 
-                        <!-- Photograph -->
-                        <img class = "pet_photograph" src = "./../images/cat.jpg" alt = "A photograph of Tom." />
+                                <!-- Delete -->
+                                <p>Delete pet</p>
+                                
 
-                        <!-- Name -->
-                        <a class="pet_name" href="./pet_page.html">Tom</a>
-
-                        <!-- Delete -->
-                        <p>Delete pet</p>
-
-                    </div>
+                            </div>
+                    <?php 
+                        } ?>
 
                     <!-- New Pet -->
                     <div class = "pet_summary">

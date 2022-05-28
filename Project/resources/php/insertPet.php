@@ -4,22 +4,22 @@ include('connect.php');
 $name = $_POST['name'];
 $type = $_POST['type'];
 $breed = $_POST['breed'];
-
-
+$username = $_COOKIE["username"];
 
 
 // -----
 
 $return ="";  
-
-
-
  
+
+
+
 $sql = "INSERT INTO pets (name, username, type, breed)
-            VALUES ('$name', 'celia', '$type', '$breed');";
+            VALUES ('$name','$username', '$type', '$breed');";
+
 
 if (mysqli_query($dbconn, $sql)) {
-    header("Location: http://localhost/Pet_Smart_Manager/Project/resources/html/pets.html");
+    header("Location: http://localhost/Pet_Smart_Manager/Project/resources/html/pets.php");
     exit();
             
 } 

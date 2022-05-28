@@ -25,7 +25,7 @@
             <header>
                 <a class="menu" href="./main_page.html"><img src="./../images/indice.jpeg" alt="Logo" id="logo"  width="30" height="31"></a>
                 <div class="menu" >Come back</div>
-                <a class="menu" href="./pets.html">Home</a>
+                <a class="menu" href="./pets.php">Home</a>
                 <a class="menu" href="my_profile.html">Profile</a>
             </header>
             <div class="panel">
