@@ -31,7 +31,7 @@
             <section>
                 <div class="panel">
                 <h1>Add a new event</h1>
-                    <form  method="POST" action="./../php/insertEvent.php">
+                    <form  method="POST" action="./insertEvent.php">
                         <div class="fields">
                         
                             <div>Name of the event:        <input type="text" id="name" name="name"></div>

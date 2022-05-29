@@ -30,7 +30,7 @@
             </header>
             <div class="panel">
             <h1>Login</h1>
-                <form  method="POST" action="./../php/loginUser.php">
+                <form  method="POST" action="./loginUser.php">
                     <div class="fields">
                         
                             <div>Username:     <input type="text" id="username" name="username"></div> 

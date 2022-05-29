@@ -25,13 +25,28 @@
                 <a class="menu" href="./pets.php">Home</a>
                 <a class="menu" href="my_profile.html">Profile</a>
             </header>
-            <h1>Toby</h1>
+            <h1>
+                
+                <?php
+                include('./connect.php');
+
+            // -----
+
+                $return ="";  
+                $id_pet = $_COOKIE["id_pet"];
+                $sql = "SELECT name FROM pets WHERE id = $id_pet;";
+                $result = mysqli_query($dbconn, $sql);
+                $row = mysqli_fetch_row($result);
+                echo $row[0];
+                ?>
+            </h1>
             <section>
                 <div class="wrapper">
                     <div class="panel" id="photo">
                         <div>
                             <img src="./../images/dog.jpg" alt="photo of the pet" >
                         </div>
+                        
                         <a href="gallery.html">
                             Gallery
                         </a>

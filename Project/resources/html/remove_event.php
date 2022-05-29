@@ -31,14 +31,15 @@
             <section>
                 <div class="panel">
                 <h1>Select the event you want to remove</h1>
-                    <form  method="POST" action="./../php/deleteEvent.php">
+                    <form  method="POST" action="./deleteEvent.php">
                         <div class="fields">
                             
                             <select name = "id_event">
                                 <?php 
-                                include('./../php/connect.php');
+                                include('./connect.php');
                                 $return ="";  
-                                $sql = "SELECT * FROM events where id_pet=9 order by date;";
+                                $id_pet = $_COOKIE["id_pet"];
+                                $sql = "SELECT * FROM events where id_pet='$id_pet' order by date;";
                                 $result = mysqli_query($dbconn, $sql);
                                 $num_rows = mysqli_num_rows($result);
                                 for($i == 0; $i < $num_rows; $i++){ 

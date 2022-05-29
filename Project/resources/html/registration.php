@@ -31,7 +31,7 @@
             <section>
                 <div class="panel">
                 <h1>Create an account</h1>
-                    <form  method="POST" action="./../php/insertUser.php">
+                    <form  method="POST" action="./insertUser.php">
                         <div class="fields">
                             
                                 <div>Select the type of account:     <input type="text" id="type" name="type" required></div> 

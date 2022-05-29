@@ -12,11 +12,11 @@ $description = $_POST['description'];
 
 $return ="";  
 
-
+$id_pet = $_COOKIE["id_pet"];
 
  
 $sql = "INSERT INTO events (id_pet,name, date, description)
-            VALUES (9, '$name', '$date', '$description');";
+            VALUES ($id_pet, '$name', '$date', '$description');";
 
 if (mysqli_query($dbconn, $sql)) {
     header("Location: http://localhost/Pet_Smart_Manager/Project/resources/html/pet_general_info.php");

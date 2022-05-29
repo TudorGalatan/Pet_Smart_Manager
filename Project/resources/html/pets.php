@@ -38,7 +38,7 @@
                 <div class = "pets_content">
 
                     <?php 
-                        include('./../php/connect.php');
+                        include('./connect.php');
                         $return ="";  
                         $username = $_COOKIE["username"];
                         $sql = "SELECT * FROM pets where username='$username';";
@@ -54,8 +54,26 @@
                                 <!-- Photograph -->
                                 <img class = "pet_photograph" src = "./../images/dog.jpg" alt = "A photograph of Rex."  />
 
+                               
                                 <!-- Name -->
-                                 <a class="pet_name" href="./pet_page.html"><?php echo $row[1] ?></a> 
+                               
+                                
+                                
+
+                                <input type="submit" value=<?php echo $row[1] ?> name="submit" id="button" onclick='SetCookie(<?php echo $row[0] ?>);'> 
+
+                                <script>
+                                    
+                                    function SetCookie(value)
+                                        {
+                                            document.cookie="id_pet="+value+";path='/'";
+                                            
+                                            
+                                            window.location="http://localhost/Pet_Smart_Manager/Project/resources/html/pet_page.php";
+                                           
+                                        }
+                                </script>
+
 
                                 <!-- Delete -->
                                 <p>Delete pet</p>

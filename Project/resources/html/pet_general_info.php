@@ -18,6 +18,7 @@
 
     </head>
     <body>
+      
         <div class="content">
             <header>
                 <a class="menu" href="./main_page.html"><img src="./../images/indice.jpeg" alt="Logo" id="logo"  width="30" height="31"></a>
@@ -25,18 +26,33 @@
                 <a class="menu" href="./pets.php">Home</a>
                 <a class="menu" href="./my_profile.html">Profile</a>
             </header>
-            <h1>Toby</h1>
+            <h1>
+                
+                <?php
+                include('./connect.php');
+
+            // -----
+
+                $return ="";  
+                $id_pet = $_COOKIE["id_pet"];
+                $sql = "SELECT name FROM pets WHERE id = $id_pet;";
+                $result = mysqli_query($dbconn, $sql);
+                $row = mysqli_fetch_row($result);
+                echo $row[0];
+                ?>
+            </h1>
             <section>
                 <div class="panel">
                     <?php
-                        include('./../php/connect.php');
+                        include('./connect.php');
 
                         // -----
 
                         $return ="";  
 
-
-                        $sql = "SELECT age,type,breed FROM pets WHERE id = '9';";
+                       
+                        
+                        $sql = "SELECT age,type,breed FROM pets WHERE id = '$id_pet';";
                         
                         $result = mysqli_query($dbconn, $sql);
                         $row = mysqli_fetch_row($result);
@@ -76,9 +92,9 @@
                     <div class="timeline">
                         <ol>
                             <?php 
-                                include('./../php/connect.php');
+                                include('./connect.php');
                                 $return ="";  
-                                $sql = "SELECT * FROM events where id_pet=9 order by date;";
+                                $sql = "SELECT * FROM events where id_pet='$id_pet' order by date;";
                                 $result = mysqli_query($dbconn, $sql);
                                 $num_rows = mysqli_num_rows($result);
                                 

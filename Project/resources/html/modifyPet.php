@@ -14,9 +14,11 @@ $age = $_POST['age'];
 $return ="";  
 
 
+$id_pet = $_COOKIE["id_pet"];
+
 
  
-$sql = "UPDATE pets SET name='$name',type='$type',breed='$breed',age='$age' WHERE id=9;";
+$sql = "UPDATE pets SET name='$name',type='$type',breed='$breed',age='$age' WHERE id=$id_pet;";
 
 if (mysqli_query($dbconn, $sql)) {
     header("Location: http://localhost/Pet_Smart_Manager/Project/resources/html/pet_general_info.php");
