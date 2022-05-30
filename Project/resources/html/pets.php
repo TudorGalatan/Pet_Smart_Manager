@@ -76,8 +76,10 @@
 
 
                                 <!-- Delete -->
-                                <p>Delete pet</p>
+                                <?php echo '<a href="./deletePet.php?id='.$row[0].'">Delete</a>'?>
                                 
+                                
+
 
                             </div>
                     <?php 
