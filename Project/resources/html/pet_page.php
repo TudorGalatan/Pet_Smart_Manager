@@ -34,7 +34,7 @@
 
                 $return ="";  
                 $id_pet = $_COOKIE["id_pet"];
-                $sql = "SELECT name FROM pets WHERE id = $id_pet;";
+                $sql = "SELECT name,img_dir FROM pets WHERE id = $id_pet;";
                 $result = mysqli_query($dbconn, $sql);
                 $row = mysqli_fetch_row($result);
                 echo $row[0];
@@ -44,7 +44,7 @@
                 <div class="wrapper">
                     <div class="panel" id="photo">
                         <div>
-                            <img src="./../images/dog.jpg" alt="photo of the pet" >
+                            <img src="<?php echo $row[1]?>" alt="photo of the pet" >
                         </div>
                         
                         <a href="gallery.html">

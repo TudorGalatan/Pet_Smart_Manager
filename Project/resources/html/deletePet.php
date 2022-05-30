@@ -5,10 +5,11 @@ if(isset($_GET['id'])) {
 
     $id = $_GET['id'];
     $sql = "DELETE FROM pets WHERE id=$id;";
+    
 
     if (mysqli_query($dbconn, $sql)) {
         header("Location: http://localhost/Pet_Smart_Manager/Project/resources/html/pets.php");
-        
+    
         exit();
                 
     } 

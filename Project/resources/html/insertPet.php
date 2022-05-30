@@ -7,18 +7,25 @@ $breed = $_POST['breed'];
 $username = $_COOKIE["username"];
 
 
-// -----
-
+$image_dir= './../images/';
+move_uploaded_file($_FILES['file']['tmp_name'], $image_dir. $_FILES['ile']['name']);
+$image = $image_dir . $_FILES['file']['name'];
 $return ="";  
- 
 
 
 
-$sql = "INSERT INTO pets (name, username, type, breed)
-            VALUES ('$name','$username', '$type', '$breed');";
+
+$sql = "INSERT INTO pets (name, username, type, breed, img_dir)
+            VALUES ('$name','$username', '$type', '$breed','$image');";
 
 
 if (mysqli_query($dbconn, $sql)) {
+        if (move_uploaded_file($tempname, $folder))  {
+            $msg = "Image uploaded successfully";
+        }else{
+            $msg = "Failed to upload image";
+        }
+    
     header("Location: http://localhost/Pet_Smart_Manager/Project/resources/html/pets.php");
     exit();
             

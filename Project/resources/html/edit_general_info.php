@@ -31,13 +31,14 @@
             <section>
                 <div class="panel">
                 <h1>Edit pet information</h1>
-                    <form  method="POST" action="./modifyPet.php">
+                    <form  method="POST" action="./modifyPet.php"  enctype="multipart/form-data">
                         <div class="fields">
                         
                             <div>Name:        <input type="text" id="name" name="name"></div>
                             <div>Type of pet:        <input type="text" id="type" name="type"></div>
                             <div>Breed:        <input type="text" id="breed" name="breed"></div>
                             <div>Age:        <input type="text" id="age" name="age"></div>
+                            <div>Photo: <input type="file" name="file" /></div>
                         </div>
                         <br>
                         <input type="submit" value="Submit" name="submit" id="button"

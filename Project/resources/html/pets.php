@@ -52,12 +52,12 @@
                             <div class = "pet_summary">
 
                                 <!-- Photograph -->
-                                <img class = "pet_photograph" src = "./../images/dog.jpg" alt = "A photograph of Rex."  />
+                             
 
                                
                                 <!-- Name -->
-                               
-                                
+                              
+                                <img class = "pet_photograph" src = "<?php echo $row[6]?>" alt = "A photograph of Rex."  />
                                 
 
                                 <input type="submit" value=<?php echo $row[1] ?> name="submit" id="button" onclick='SetCookie(<?php echo $row[0] ?>);'> 
