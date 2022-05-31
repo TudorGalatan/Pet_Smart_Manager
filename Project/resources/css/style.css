@@ -83,7 +83,10 @@ h2 {
   background-color: beige;
 }
 
-
+img {
+  max-width: 100%;
+  display: block;
+}
 
 
 

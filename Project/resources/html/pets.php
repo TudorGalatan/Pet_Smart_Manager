@@ -9,8 +9,9 @@
     <head>
 
         <!-- Stylesheet -->
-        <link rel = "stylesheet" href = "./../css/pets_style.css" />
+        
         <link rel = "stylesheet" href = "./../css/style.css" />
+        <link rel = "stylesheet" href = "./../css/petss_style.css" />
 
         <!-- Charset -->
         <meta charset = "UTF-8" />
@@ -76,7 +77,7 @@
 
 
                                 <!-- Delete -->
-                                <?php echo '<a href="./deletePet.php?id='.$row[0].'">Delete</a>'?>
+                                <?php echo '<a class="delete_pet" href="./deletePet.php?id='.$row[0].'">Delete</a>'?>
                                 
                                 
 
