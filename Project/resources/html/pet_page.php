@@ -58,7 +58,7 @@
                         <a class="panel-son" href="medical_history.php">
                             Medical history
                         </a>
-                        <a class="panel-son" href="food_info.html">
+                        <a class="panel-son" href="food_info.php">
                             Food information
                         </a>
                     </div>

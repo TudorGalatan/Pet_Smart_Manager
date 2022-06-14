@@ -41,7 +41,7 @@
                             <div>Photo: <input type="file" name="file" /></div>
                         </div>
                         <br>
-                        <input type="submit" value="Submit" name="submit" id="button"
+                        <input type="submit" value="Submit" name="submit" id="button">
                         <br>
                         <br>
                     </form>
