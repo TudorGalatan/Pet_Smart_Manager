@@ -23,7 +23,7 @@
                 <a class="menu" href="./main_page.html"><img src="./../images/indice.jpeg" alt="Logo" id="logo"  width="30" height="31"></a>
                 <a class="menu" href="./pets.php">Come back</a>
                 <a class="menu" href="./pets.php">Home</a>
-                <a class="menu" href="my_profile.html">Profile</a>
+                <a class="menu" href="./my_profile.php">Profile</a>
             </header>
             <h1>
                 
@@ -55,7 +55,7 @@
                         <a class="panel-son" href="pet_general_info.php">
                             General information
                         </a>
-                        <a class="panel-son" href="medical_history.html">
+                        <a class="panel-son" href="medical_history.php">
                             Medical history
                         </a>
                         <a class="panel-son" href="food_info.html">
