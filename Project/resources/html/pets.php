@@ -28,7 +28,7 @@
                 <a class="menu" href="./main_page.html"><img src="./../images/indice.jpeg" alt="Logo" id="logo"  width="30" height="31"></a>
                 <a class="menu" href="./login.php">Come back</a>
                 <a class="menu" href="./pets.php">Home</a>
-                <a class="menu" href="my_profile.html">Profile</a>
+                <a class="menu" href="my_profile.php">Profile</a>
             </header>
 
             <!-- Title -->
