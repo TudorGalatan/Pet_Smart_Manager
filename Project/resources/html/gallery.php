@@ -9,7 +9,7 @@
     <head>
 
         <!-- Stylesheet -->
-        <link rel = "stylesheet" href = "./../css/gallery.css" />
+        <link rel = "stylesheet" href = "./../css/galleryy.css" />
         <link rel = "stylesheet" href = "./../css/style.css" />
 
         <!-- Charset -->
@@ -25,9 +25,9 @@
         <div class="content">
             <header>
                 <a class="menu" href="./main_page.html"><img src="./../images/indice.jpeg" alt="Logo" id="logo"  width="30" height="31"></a>
-                <div class="menu">Come back</div>
+                <a class="menu" href="./pet_page.php">Come back</a>
                 <a class="menu" href="./pets.php">Home</a>
-                <a class="menu" href="my_profile.html">Profile</a>
+                <a class="menu" href="my_profile.php">Profile</a>
             </header>
 
             <!-- Title -->
@@ -36,21 +36,38 @@
             <section>
             <!-- Gallery Content -->
                 <div class = "gallery_content">
-
+                    <?php 
+                        include('./connect.php');
+                        $return ="";  
+                        $id_pet = $_COOKIE["id_pet"];
+                        $sql = "SELECT img_dir,id FROM gallery where id_pet=$id_pet;";
+                        $result = mysqli_query($dbconn, $sql);
+                        $num_rows = mysqli_num_rows($result);
+                        
+                        for($i == 0; $i < $num_rows; $i++){ 
+                           $row = mysqli_fetch_row($result);
+                    ?>
                     <!-- Gallery Summary -->
                     <div class = "gallery_summary">
 
                         <!-- Photograph -->
-                        <img class = "pet_photograph" src = "./../images/dog2.jpeg" alt = "Photo or videos" />
+                        <img class = "pet_photograph" src = "<?php echo $row[0]?>" alt = "Photo or videos" />
 
+
+                        
+                        <!-- Delete -->
+                        <?php echo '<a href="./deletePhoto.php?id='.$row[1].'">Delete</a>'?>
                     </div>
+
+                    <?php 
+                        } ?>
 
         
                     <!-- New Photo/Video -->
                     <div class = "gallery_summary">
 
                         <!-- Add Gallery -->
-                        <a class="add_new" href="./add_new_photo.html">Add new photo/video</a>
+                        <a class="add_new" href="./add_new_photo.php">Add new photo/video</a>
 
                     </div>
 

@@ -47,7 +47,7 @@
                             <img src="<?php echo $row[1]?>" alt="photo of the pet" >
                         </div>
                         
-                        <a href="gallery.html">
+                        <a href="gallery.php">
                             Gallery
                         </a>
                     </div>

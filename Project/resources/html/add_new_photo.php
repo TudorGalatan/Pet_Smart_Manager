@@ -29,15 +29,18 @@
                 <a class="menu" href="my_profile.html">Profile</a>
             </header>
             <section>
-                <div class="panel">
-                <h1>Add new photo/video</h1>
-                
-           
-                    <br>
-                    <input value="Upload" name="Upload" id="Upload"> 
-                    <br>
-                    <br>
-                </div>
+            <form  method="POST" action="./addPhoto.php"  enctype="multipart/form-data">
+                    <div class="panel">
+                    <h1>Add new photo/video</h1>
+                    
+            
+                        <br>
+                        <div>Photo: <input type="file" name="file" /></div>
+                        <br>
+                        <br>
+                        <input type="submit" value="Submit" name="submit" id="button">
+                    </div>
+            </form>
             </section>
         </div>
         <footer>
