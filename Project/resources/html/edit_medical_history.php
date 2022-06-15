@@ -39,7 +39,7 @@
                             <div>Next doctor appointment: <input type="text" id="next_date" name="next_date"></div>
                             <div>Previous doctor appointments:        <input type="text" id="previous_date" name="previous_date"></div>
                             <div>Previous surgeries:        <input type="text" id="previous_surgeries" name="previous_surgeries"></div>
-                
+                            <div>First aid:        <input type="text" id="first_aid" name="first_aid"></div>
                         </div>
                         <br>
                         <input type="submit" value="Submit" name="submit" id="button"

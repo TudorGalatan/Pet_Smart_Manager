@@ -42,7 +42,7 @@
 
                             $return ="";  
                             $id_pet = $_COOKIE["id_pet"];
-                            $sql = "SELECT allergies, diseases, next_date, previous_date, previous_surgeries FROM medical WHERE id_pet =$id_pet;";
+                            $sql = "SELECT allergies, diseases, next_date, previous_date, previous_surgeries, first_aid FROM medical WHERE id_pet =$id_pet;";
                             $result = mysqli_query($dbconn, $sql);
                             $row = mysqli_fetch_row($result);
                             mysqli_close($dbconn);
@@ -53,6 +53,7 @@
                     <p>Next doctor appointment: <?php echo $row[2]?></p>
                     <p>Previous doctor appointments:<?php echo $row[3]?></p>
                     <p>Previous surgeries: <?php echo $row[4]?></p>
+                    <p>First aid: <?php echo $row[5]?></p>
                     <a class="edit_buttom" href="./edit_medical_history.php"> Edit</a>
 
                     

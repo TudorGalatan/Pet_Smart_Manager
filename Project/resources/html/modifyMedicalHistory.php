@@ -6,7 +6,7 @@ $diseases = $_POST['diseases'];
 $next_date = $_POST['next_date'];
 $previous_date = $_POST['previous_date'];
 $previous_surgeries = $_POST['previous_surgeries'];
-
+$first_aid = $_POST['first_aid'];
 
 // -----
 
@@ -20,12 +20,12 @@ $sql = "SELECT  id from medical WHERE id_pet=$id_pet;";
 $result = mysqli_query($dbconn, $sql);
 $num_rows = mysqli_num_rows($result);
 if($num_rows > 0){
-    $sql_new = "UPDATE medical SET allergies='$allergies',diseases='$diseases',next_date='$next_date', previous_date='$previous_date', previous_surgeries='$previous_surgeries' WHERE id_pet=$id_pet;";
+    $sql_new = "UPDATE medical SET allergies='$allergies',diseases='$diseases',next_date='$next_date', previous_date='$previous_date', previous_surgeries='$previous_surgeries', first_aid='$first_aid' WHERE id_pet=$id_pet;";
 }
 else{
      
-    $sql_new = "INSERT INTO medical (id_pet,allergies,diseases, next_date,previous_date, previous_surgeries)
-    VALUES ($id_pet, '$allergies', '$diseases', '$next_date', '$previous_date','$previous_surgeries');";
+    $sql_new = "INSERT INTO medical (id_pet,allergies,diseases, next_date,previous_date, previous_surgeries, first_aid)
+    VALUES ($id_pet, '$allergies', '$diseases', '$next_date', '$previous_date','$previous_surgeries', '$first_aid');";
 
 }
 
