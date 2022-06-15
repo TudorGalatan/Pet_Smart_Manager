@@ -34,13 +34,20 @@
                     <h1>Edit food information</h1>
                     
                         <div class="fields">
-                            <div>Monday:        <input type="text" id="monday" name="monday"></div>
-                            <div>Tuesday:        <input type="text" id="tuesday" name="tuesday"></div>
-                            <div>Wednesday:        <input type="text" id="wednesday" name="wednesday"></div>
-                            <div>Thursday:        <input type="text" id="thursday" name="thursday"></div>
-                            <div>Friday:        <input type="text" id="friday" name="friday"></div>
-                            <div>Saturday:        <input type="text" id="saturday" name="saturday"></div>
-                            <div>Sunday:        <input type="text" id="sunday" name="sunday"></div>
+                            <div>Monday lunch:        <input type="text" id="monday" name="monday_lunch"></div>
+                            <div>Monday dinner:        <input type="text" id="monday" name="monday_dinner"></div>
+                            <div>Tuesday lunch:        <input type="text" id="tuesday" name="tuesday_lunch"></div>
+                            <div>Tuesday dinner:        <input type="text" id="tuesday" name="tuesday_dinner"></div>
+                            <div>Wednesday lunch:        <input type="text" id="wednesday" name="wednesday_lunch"></div>
+                            <div>Wednesday dinner:        <input type="text" id="wednesday" name="wednesday_dinner"></div>
+                            <div>Thursday lunch:        <input type="text" id="thursday" name="thursday_lunch"></div>
+                            <div>Thursday dinner:        <input type="text" id="thursday" name="thursday_dinner"></div>
+                            <div>Friday lunch:        <input type="text" id="friday" name="friday_lunch"></div>
+                            <div>Friday dinner:        <input type="text" id="friday" name="friday_dinner"></div>
+                            <div>Saturday lunch:        <input type="text" id="saturday" name="saturday_lunch"></div>
+                            <div>Saturday dinner:        <input type="text" id="saturday" name="saturday_dinner"></div>
+                            <div>Sunday lunch:        <input type="text" id="sunday" name="sunday_lunch"></div>
+                            <div>Sunday dinner:        <input type="text" id="sunday" name="sunday_dinner"></div>
                         </div>
                         <br>
                         <input type="submit" value="Submit" name="submit" id="button">

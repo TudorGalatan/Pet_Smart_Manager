@@ -1,13 +1,20 @@
 <?php
 include('connect.php');
 
-$monday = $_POST['monday'];
-$tuesday = $_POST['tuesday'];
-$wednesday = $_POST['wednesday'];
-$thursday = $_POST['thursday'];
-$friday = $_POST['friday'];
-$saturday = $_POST['saturday'];
-$sunday = $_POST['sunday'];
+$monday_lunch = $_POST['monday_lunch'];
+$monday_dinner = $_POST['monday_dinner'];
+$tuesday_lunch = $_POST['tuesday_lunch'];
+$tuesday_dinner = $_POST['tuesday_dinner'];
+$wednesday_lunch = $_POST['wednesday_lunch'];
+$wednesday_dinner = $_POST['wednesday_dinner'];
+$thursday_lunch = $_POST['thursday_lunch'];
+$thursday_dinner = $_POST['thursday_dinner'];
+$friday_lunch = $_POST['friday_lunch'];
+$friday_dinner = $_POST['friday_dinner'];
+$saturday_lunch = $_POST['saturday_lunch'];
+$saturday_dinner = $_POST['saturday_dinner'];
+$sunday_lunch = $_POST['sunday_lunch'];
+$sunday_dinner = $_POST['sunday_dinner'];
 
 
 // -----
@@ -18,16 +25,16 @@ $return ="";
 $id_pet = $_COOKIE["id_pet"];
 
 
-$sql = "SELECT  id from food WHERE id_pet=$id_pet;";
+$sql = "SELECT  id_pet from calendar WHERE id_pet=$id_pet;";
 $result = mysqli_query($dbconn, $sql);
 $num_rows = mysqli_num_rows($result);
 if($num_rows > 0){
-    $sql_new = "UPDATE food SET monday='$monday',tuesday='$tuesday',wednesday='$wednesday',thursday='$thursday', friday='$friday', saturday='$saturday', sunday='$sunday' WHERE id_pet=$id_pet;";
+    $sql_new = "UPDATE calendar SET monday_lunch='$monday_lunch', monday_dinner='$monday_dinner',tuesday_lunch='$tuesday_lunch', tuesday_dinner='$tuesday_dinner',wednesday_lunch='$wednesday_lunch', wednesday_dinner='$wednesday_dinner',thursday_lunch='$thursday_lunch',thursday_dinner='$thursday_dinner', friday_lunch='$friday_lunch',friday_dinner='$friday_dinner', saturday_lunch='$saturday_lunch', saturday_dinner='$saturday_dinner',sunday_lunch='$sunday_lunch',sunday_dinner='$sunday_dinner' WHERE id_pet=$id_pet;";
 }
 else{
      
-    $sql_new = "INSERT INTO food (id_pet,monday, tuesday, wednesday, thursday, friday, saturday, sunday)
-    VALUES ($id_pet, '$monday', '$tuesday','$wednesday', '$thursday' , '$friday', '$saturday', '$sunday');";
+    $sql_new = "INSERT INTO calendar (id_pet,monday_lunch, monday_dinner, tuesday_lunch, tuesday_dinner, wednesday_lunch, wednesday_dinner, thursday_lunch, thursday_dinner, friday_lunch, friday_dinner, saturday_lunch, saturday_dinner, sunday_lunch, sunday_dinner)
+    VALUES ($id_pet, '$monday_lunch','$monday_dinner',  '$tuesday_lunch','$tuesday_dinner','$wednesday_lunch', '$wednesday_dinner','$thursday_lunch' ,'$thursday_dinner' , '$friday_lunch','$friday_dinner',  '$saturday_lunch','$saturday_dinner', '$sunday_lunch', '$sunday_dinner');";
 
 }
 
