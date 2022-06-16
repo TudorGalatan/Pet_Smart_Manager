@@ -41,6 +41,31 @@
                         <input type="submit" value="Submit" name="submit" id="button">
                     </div>
             </form>
+
+            <form  method="POST" action="./addAudio.php"  enctype="multipart/form-data">
+                    <div class="panel">
+                    <h1>Add new audio</h1>
+                    
+            
+                        <br>
+                        <div>Audio: <input type="file" name="file" /></div>
+                        <br>
+                        <br>
+                        <input type="submit" value="Submit" name="submit" id="button">
+                    </div>
+            </form>
+            <form  method="POST" action="./addVideo.php"  enctype="multipart/form-data">
+                    <div class="panel">
+                    <h1>Add new video</h1>
+                    
+            
+                        <br>
+                        <div>Video: <input type="file" accept="video/*" name="file" /></div>
+                        <br>
+                        <br>
+                        <input type="submit" value="Submit" name="submit" id="button">
+                    </div>
+            </form>
             </section>
         </div>
         <footer>
