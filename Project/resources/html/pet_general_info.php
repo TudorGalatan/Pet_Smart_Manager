@@ -94,7 +94,7 @@
                             <?php 
                                 include('./connect.php');
                                 $return ="";  
-                                $sql = "SELECT * FROM events where id_pet='$id_pet' order by date;";
+                                $sql = "SELECT * FROM events where id_pet=$id_pet order by date;";
                                 $result = mysqli_query($dbconn, $sql);
                                 $num_rows = mysqli_num_rows($result);
                                 
@@ -132,6 +132,45 @@
                         </div>
                         <br>
                     </div>
+                </div>
+            </section>
+            <section>
+                <div class="panel">
+                        <h2>Relationship with others animals</h2>
+                        <?php
+                            include('./connect.php');
+                            $return ="";  
+                            
+                            $sql = "SELECT * FROM friends where id_pet_host=$id_pet;";
+                            $result = mysqli_query($dbconn, $sql);
+                            $num_rows = mysqli_num_rows($result);
+                            
+
+
+                           
+                            
+                                for($j == 0; $j < $num_rows; $j++){ 
+                                    
+                                    $row = mysqli_fetch_row($result);
+                                   
+                                    $sql2 = "SELECT name, username FROM pets where id=$row[2];";
+                                    
+                                    $result2 = mysqli_query($dbconn, $sql2);
+                                  
+                                    $row2 = mysqli_fetch_row($result2);
+                                    
+                            
+                        ?>
+                        <p><?php echo $row2[0]?>  from <?php echo $row2[1]?>: <?php echo $row[3] ?></p>
+                        <?php echo '<a href="./deleteFriend.php?id='.$row[0].'">Delete</a>'?>
+                        <?php }
+                        ?>
+                        <div class="buttons">
+                            <div class="modify_event"><a href="./add_friend.php">Add relationship</a></div>
+                            
+                        </div>
+
+
                 </div>
             </section>
         </div>
