@@ -42,7 +42,18 @@ h1{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+.buttons{
+  display:flex;
+  
+}
 
+.modify_event{
+  width: 100%;
+  float: left;
+  font-weight: bold;
+  color:rgb(59, 56, 56);
+  text-align: center;
+}
 
 a{
   text-decoration: none;

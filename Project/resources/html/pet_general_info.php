@@ -107,7 +107,9 @@
                                                     <p class="date"><?php echo $row[3] ?></p>
                                                     <time><?php echo $row[2] ?></time>
                                                     <p class="description"><?php echo $row[4] ?></p>
+                                                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                                                 </div>
+                                                
                                             </li>
                                         
                                         

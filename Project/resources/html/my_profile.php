@@ -52,7 +52,7 @@
 
                         ?>
                         <!-- Photograph -->
-                        <img class = "team_member_photograph" src = "<?php echo $row[0]?>" alt = "A photograph of myself." />
+                        <img class = "team_member_photograph" src = "<?php echo $row[0]?>" alt = "Profile photograph."  width=300/>
                        
                     </div>
 
@@ -76,8 +76,11 @@
                         <p>Username: <?php echo $row[0]?></p>
                         <p>Type of account: <?php echo $row[4]?></p>
                         <p>Email: <?php echo $row[3]?></p>
-                        <a class="edit_buttom" href="./edit_profile.php"> Edit</a>
-
+                        
+                        <div class="buttons">
+                            <div class="modify_event"><a href="./edit_profile.php">Edit</a></div>
+                            
+                        </div>
                     </div>
 
                 </div>

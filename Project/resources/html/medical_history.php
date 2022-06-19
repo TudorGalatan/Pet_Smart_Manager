@@ -54,7 +54,11 @@
                     <p>Previous doctor appointments:<?php echo $row[3]?></p>
                     <p>Previous surgeries: <?php echo $row[4]?></p>
                     <p>First aid: <?php echo $row[5]?></p>
-                    <a class="edit_buttom" href="./edit_medical_history.php"> Edit</a>
+                    <div class="buttons">
+                            <div class="modify_event"><a href="./edit_medical_history.php">Edit</a></div>
+                            
+                    </div>
+                    
 
                     
                 </div>

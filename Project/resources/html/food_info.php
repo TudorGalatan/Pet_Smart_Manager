@@ -201,10 +201,15 @@
   </div>
 </div>
 
-<a class="edit_buttom" href="./edit_plan_info.php"> Edit</a>
+
 <div class="buttons">
-                <div class="modify_event"><a href="./removePlan.php">Delete plan</a></div>
-            </div>
+    <div class="modify_event"><a class="edit_buttom" href="./edit_plan_info.php"> Edit</a></div>
+    <div class="modify_event"><a href="./removePlan.php">Delete plan</a></div>
+                            
+</div>
+
+
+
             
 
 <h3 class="planner">Hours of feeding</h3>
