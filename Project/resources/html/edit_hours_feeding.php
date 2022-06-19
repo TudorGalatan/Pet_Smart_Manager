@@ -20,7 +20,22 @@
 
 
     <body>
-        
+    <?php
+             include('./connect.php');
+
+                        // -----
+
+             $return ="";  
+              $id_pet = $_COOKIE["id_pet"];
+              $sql = "SELECT lunch,dinner FROM food WHERE id_pet =$id_pet;";
+              $result = mysqli_query($dbconn, $sql);
+              $row = mysqli_fetch_row($result);
+
+             mysqli_close($dbconn);
+
+
+
+        ?>
         <div class="content">
             <header>
                 <a class="menu" href="./main_page.html"><img src="./../images/indice.jpeg" alt="Logo" id="logo"  width="30" height="31"></a>
@@ -35,8 +50,8 @@
                     <h1>Edit hours of feeding</h1>
                     
                         <div class="fields">
-                            <div>Lunch:       <input type="text" id="lunch" name="lunch"></div>
-                            <div>Dinner:        <input type="text" id="dinner" name="dinner"></div>
+                            <div>Lunch:       <input type="text" id="lunch" name="lunch" value="<?php echo $row[0]?>"></div>
+                            <div>Dinner:        <input type="text" id="dinner" name="dinner" value="<?php echo $row[1]?>"></div>
                         </div>
                         <br>
                         <input type="submit" value="Submit" name="submit" id="button">

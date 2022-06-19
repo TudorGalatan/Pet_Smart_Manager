@@ -43,7 +43,7 @@
             <section>
                 <div class="wrapper">
                     <div class="panel" id="photo">
-                        <div>
+                        <div >
                             <img src="<?php echo $row[1]?>" alt="photo of <?php echo $row[0]?>" >
                         </div>
                         

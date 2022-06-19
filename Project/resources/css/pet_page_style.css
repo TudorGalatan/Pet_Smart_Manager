@@ -42,13 +42,6 @@
 
 
 
-.panel > div  > img{
-    margin-top:1.2%;
-    
-    height: 95%;
-    object-fit: cover;
-    object-position: center center;
-}
 
 #info{
     display:grid;
@@ -67,4 +60,5 @@
 
 
 }
+
 

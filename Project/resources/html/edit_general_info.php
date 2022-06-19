@@ -20,6 +20,23 @@
 
 
     <body>
+
+    <?php
+             include('./connect.php');
+
+                        // -----
+
+             $return ="";  
+              $id_pet = $_COOKIE["id_pet"];
+              $sql = "SELECT name, type, breed, age, img_dir FROM pets WHERE id =$id_pet;";
+              $result = mysqli_query($dbconn, $sql);
+              $row = mysqli_fetch_row($result);
+
+             mysqli_close($dbconn);
+
+
+
+        ?>
         
         <div class="content">
             <header>
@@ -34,11 +51,11 @@
                     <form  method="POST" action="./modifyPet.php"  enctype="multipart/form-data">
                         <div class="fields">
                         
-                            <div>Name:        <input type="text" id="name" name="name"></div>
-                            <div>Type of pet:        <input type="text" id="type" name="type"></div>
-                            <div>Breed:        <input type="text" id="breed" name="breed"></div>
-                            <div>Age:        <input type="text" id="age" name="age"></div>
-                            <div>Photo: <input type="file" name="file" /></div>
+                            <div>Name:        <input type="text" id="name" name="name" value="<?php echo $row[0]?>"></div>
+                            <div>Type of pet:        <input type="text" id="type" name="type" value="<?php echo $row[1]?>"></div>
+                            <div>Breed:        <input type="text" id="breed" name="breed" value="<?php echo $row[2]?>"></div>
+                            <div>Age:        <input type="text" id="age" name="age" value="<?php echo $row[3]?>"></div>
+                            <div>Photo: <input type="file" name="file" value="<?php echo $row[4]?>"/></div>
                         </div>
                         <br>
                         <input type="submit" value="Submit" name="submit" id="button">

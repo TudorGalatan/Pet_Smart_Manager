@@ -20,6 +20,23 @@
 
 
     <body>
+
+    <?php
+             include('./connect.php');
+
+                        // -----
+
+             $return ="";  
+              $username = $_COOKIE["username"];
+              $sql = "SELECT name, type, email, img_dir FROM users WHERE username ='$username';";
+              $result = mysqli_query($dbconn, $sql);
+              $row = mysqli_fetch_row($result);
+
+             mysqli_close($dbconn);
+
+
+
+        ?>
         
         <div class="content">
             <header>
@@ -34,10 +51,10 @@
                     <form  method="POST" action="./modifyProfile.php"  enctype="multipart/form-data">
                         <div class="fields">
                         
-                            <div>Name:        <input type="text" id="name" name="name"></div>
-                            <div>Type of account:        <input type="text" id="type" name="type"></div>
-                            <div>Email:        <input type="text" id="email" name="email"></div>
-                            <div>Photo: <input type="file" name="file" /></div>
+                            <div>Name:        <input type="text" id="name" name="name" value="<?php echo $row[0]?>"></div>
+                            <div>Type of account:        <input type="text" id="type" name="type" value="<?php echo $row[1]?>"></div>
+                            <div>Email:        <input type="text" id="email" name="email" value="<?php echo $row[2]?>"></div>
+                            <div>Photo: <input type="file" name="file" value="<?php echo $row[3]?>"/></div>
                         </div>
                         <br>
                         <input type="submit" value="Submit" name="submit" id="button">

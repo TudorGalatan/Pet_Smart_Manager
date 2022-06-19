@@ -20,6 +20,24 @@
 
 
     <body>
+
+    <?php
+             include('./connect.php');
+
+                        // -----
+
+             $return ="";  
+              $id_pet = $_COOKIE["id_pet"];
+              $sql = "SELECT allergies,diseases, next_date, previous_date, previous_surgeries, first_aid FROM medical WHERE id_pet =$id_pet;";
+              $result = mysqli_query($dbconn, $sql);
+              $row = mysqli_fetch_row($result);
+
+             mysqli_close($dbconn);
+
+
+
+        ?>
+        
         
         <div class="content">
             <header>
@@ -34,12 +52,12 @@
                     <form  method="POST" action="./modifyMedicalHistory.php"  enctype="multipart/form-data">
                         <div class="fields">
                         
-                            <div>Allergies:        <input type="text" id="allergies" name="allergies"></div>
-                            <div>Diseases:        <input type="text" id="diseases" name="diseases"></div>
-                            <div>Next doctor appointment: <input type="text" id="next_date" name="next_date"></div>
-                            <div>Previous doctor appointments:        <input type="text" id="previous_date" name="previous_date"></div>
-                            <div>Previous surgeries:        <input type="text" id="previous_surgeries" name="previous_surgeries"></div>
-                            <div>First aid:        <input type="text" id="first_aid" name="first_aid"></div>
+                            <div>Allergies:        <input type="text" id="allergies" name="allergies" value="<?php echo $row[0]?>"></div>
+                            <div>Diseases:        <input type="text" id="diseases" name="diseases" value="<?php echo $row[1]?>"></div>
+                            <div>Next doctor appointment: <input type="text" id="next_date" name="next_date" value="<?php echo $row[2]?>"></div>
+                            <div>Previous doctor appointments:        <input type="text" id="previous_date" name="previous_date" value="<?php echo $row[3]?>"></div>
+                            <div>Previous surgeries:        <input type="text" id="previous_surgeries" name="previous_surgeries" value="<?php echo $row[4]?>"></div>
+                            <div>First aid:        <input type="text" id="first_aid" name="first_aid" value="<?php echo $row[5]?>"></div>
                         </div>
                         <br>
                         <input type="submit" value="Submit" name="submit" id="button"
