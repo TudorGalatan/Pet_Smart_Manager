@@ -44,7 +44,7 @@
                 <div class="wrapper">
                     <div class="panel" id="photo">
                         <div >
-                            <img src="<?php echo $row[1]?>" alt="photo of <?php echo $row[0]?>" >
+                            <img src="<?php echo $row[1]?>" alt="photo of <?php echo $row[0]?>" width=270>
                         </div>
                         
                         <a href="gallery.php">
